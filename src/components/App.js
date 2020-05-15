@@ -1,9 +1,11 @@
 import React,{Component} from "react";
-
+import Resume from "./preview/Resume";
 
 const App = () => {
     return (
-        <div>App</div>
+        <div className="app">
+            <Resume/>
+        </div>
     )
 };
 

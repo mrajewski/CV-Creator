@@ -1,4 +1,5 @@
 import React from 'react';
+import "./App.scss"
 import ReactDOM from 'react-dom';
 import {Provider} from "react-redux";
 import App from "./components/App";

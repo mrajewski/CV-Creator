@@ -1,8 +1,7 @@
+@import "styles/variables";
+@import "styles/resume";
+
 .app {
   background-color: #eee;
-}
-
-.resume {
-  background-color: #fff;
-  box-shadow: 0 5px 10px rgba(0,0,0,.1); ;
+  padding: 20px 0;
 }

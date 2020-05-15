@@ -9,7 +9,7 @@ import Summary from "./Summary";
 
 const Resume = () => {
     return (
-        <div className="ui container resume">
+        <div className="resume">
             <Profile/>
             <Summary/>
             <Skills/>

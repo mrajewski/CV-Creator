@@ -1,0 +1,35 @@
+.resume {
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  width: 900px;
+  padding: 60px 120px;
+  margin: 0 auto;
+}
+
+.section {
+  cursor: pointer;
+  outline: 1px dashed transparent;
+  transition: outline-color .1s, background-color .1s;
+  padding: 5px 10px;
+
+  &:hover {
+    outline-color: $blue;
+    background-color: $hoverGrey;
+  }
+}
+
+.header {
+  margin-bottom: 5px;
+}
+
+.title {
+  margin-bottom: 5px;
+}
+
+.address {
+  span {
+    font-size: 12px;
+    color: $lightGrey;
+    margin-right: 10px;
+  }
+}

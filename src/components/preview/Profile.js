@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {connect} from "react-redux"
-import ModalForm from "../modals/ModalForm";
+import ProfileForm from "../modals/ModalForm";
+import {Field, reduxForm} from "redux-form";
 
 
 const Profile = ({profile}) => {
@@ -15,6 +16,11 @@ const Profile = ({profile}) => {
         setIsOpen(false);
     };
 
+
+    const onSubmit = () => {
+
+    };
+
     return (
         <>
             <section onClick={openModal} className="section profile">
@@ -26,12 +32,12 @@ const Profile = ({profile}) => {
                     <span>{profile.mail}</span>
                 </div>
             </section>
-            <ModalForm
+            <ProfileForm
                 open={modalIsOpen}
                 close={closeModal}
-
+                initialValues={profile}
             >
-            </ModalForm>
+            </ProfileForm>
         </>
 
     )

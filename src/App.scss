@@ -1,7 +1,9 @@
 @import "styles/variables";
 @import "styles/resume";
+@import "styles/modal";
 
 .app {
   background-color: #eee;
+  min-height: 100vh;
   padding: 20px 0;
 }

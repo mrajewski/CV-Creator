@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {connect} from "react-redux"
-import Modal from 'react-modal';
-import ModalForm from "../modals/ProfileModal";
+import ModalForm from "../modals/ModalForm";
 
 
 const Profile = ({profile}) => {
@@ -30,6 +29,7 @@ const Profile = ({profile}) => {
             <ModalForm
                 open={modalIsOpen}
                 close={closeModal}
+
             >
             </ModalForm>
         </>

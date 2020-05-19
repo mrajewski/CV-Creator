@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {Button, Header, Modal} from 'semantic-ui-react'
 import {Field, reduxForm} from "redux-form";
 import {connect} from "react-redux"
+import _ from "lodash"
+
 import {profileUpdate} from "../../actions";
 
 class ProfileForm extends Component {
@@ -10,26 +12,24 @@ class ProfileForm extends Component {
         this.props.close()
     };
 
-    renderInput({ input, label, meta, value }) {
-        const className = `field ${meta.error && meta.touched ? 'error': ''}`;
+    renderInput = ({ input, label, meta }) => {
+        const className = `field ${meta.error && meta.submitFailed ? 'error': ''}`;
+        console.log(meta);
 
         return (
             <div className={className}>
                 <label>{label}</label>
                 <input {...input} autoComplete="off"/>
-                {/*{this.renderError(meta)}*/}
             </div>
         )
-    }
+    };
 
     render() {
-        const {name, job, phone, mail, address} = this.props.profile;
-
         return (
             <Modal open={this.props.open} onClose={this.props.close}>
                 <Modal.Header>Edit profile</Modal.Header>
                 <Modal.Content>
-                    <form className="ui form" onSubmit={this.props.handleSubmit(this.onSubmit)}>
+                    <form id="profile-form" className="ui form error" onSubmit={this.props.handleSubmit(this.onSubmit)}>
                         <div className="two fields">
                             <Field
                                 name="name"
@@ -42,28 +42,49 @@ class ProfileForm extends Component {
                                 component={this.renderInput}
                             />
                         </div>
-                        {/*<Button attached="right" onClick={this.props.close} negative>Cancel</Button>*/}
-                        {/*<Button attached="right" positive>Send</Button>*/}
+                        <div className="two fields">
+                            <Field
+                                name="phone"
+                                label="Phone"
+                                component={this.renderInput}
+                            />
+                            <Field
+                                name="mail"
+                                label="E-mail"
+                                component={this.renderInput}
+                            />
+                        </div>
+                        <Field
+                            name="address"
+                            label="Address"
+                            component={this.renderInput}
+                        />
                     </form>
                 </Modal.Content>
                 <Modal.Actions>
-                    <Button onClick={this.props.close} negative>Cancel</Button>
-                    <Button positive primary>Send</Button>
+                    <button onClick={this.props.close} className="ui button">Cancel</button>
+                    <button className="ui button positive" type="submit" form="profile-form">Send</button>
                 </Modal.Actions>
             </Modal>
         )
     }
 }
 
+const validate = (formValues) => {
+  const errors = {};
 
-const mapStateToProps = (state) => {
-    return {
-        profile: state.resume.profile
-    }
+  _.forOwn(formValues, function (value, key) {
+      if (!value) {
+          errors[key] = "This field can't be empty"
+      }
+  });
+
+  return errors
 };
 
-const modalForm = connect(mapStateToProps, {profileUpdate})(ProfileForm);
+const modalForm = connect(null, {profileUpdate})(ProfileForm);
 
 export default reduxForm({
-    form: "profileData"
+    form: "profileData",
+    validate
 })(modalForm)

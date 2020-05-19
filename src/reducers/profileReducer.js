@@ -5,7 +5,7 @@ const INITIAL_STATE = {
     job: "Frontend Developer",
     phone: "+48 500 600 700",
     mail: "example@example.com",
-    address: "ul. Example 99, 00-000 Warszawa"
+    address: "ul. Example 99, 00-000 Warszawa",
 };
 
 export default (state= INITIAL_STATE, action) => {

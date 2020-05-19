@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 import {connect} from "react-redux"
 import ProfileForm from "../modals/ModalForm";
-import {Field, reduxForm} from "redux-form";
+
+import ImagePreview from "./ImagePreview"
 
 
-const Profile = ({profile}) => {
+const Profile = ({profile, photo}) => {
     const [modalIsOpen, setIsOpen] = useState(false);
 
     const openModal = () => {
@@ -16,28 +17,35 @@ const Profile = ({profile}) => {
         setIsOpen(false);
     };
 
-
-    const onSubmit = () => {
-
+    const renderSection = () => {
+        return (
+            <div className="ui grid">
+                <div className="twelve wide column">
+                    <section onClick={openModal} className="section profile">
+                        <h2 className="name">{profile.name}</h2>
+                        <p className="title">{profile.job}</p>
+                        <div className="address">
+                            <span>{profile.address}</span>
+                            <span>{profile.phone}</span>
+                            <span>{profile.mail}</span>
+                        </div>
+                    </section>
+                </div>
+                <div className="four wide column">
+                   <ImagePreview/>
+                </div>
+            </div>
+        )
     };
 
     return (
         <>
-            <section onClick={openModal} className="section profile">
-                <h2 className="header">{profile.name}</h2>
-                <p className="title">{profile.job}</p>
-                <div className="address">
-                    <span>{profile.address}</span>
-                    <span>{profile.phone}</span>
-                    <span>{profile.mail}</span>
-                </div>
-            </section>
+            {renderSection()}
             <ProfileForm
                 open={modalIsOpen}
                 close={closeModal}
                 initialValues={profile}
-            >
-            </ProfileForm>
+            />
         </>
 
     )

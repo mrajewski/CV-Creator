@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Button, Header, Modal} from 'semantic-ui-react'
+import {Modal} from 'semantic-ui-react'
 import {Field, reduxForm} from "redux-form";
 import {connect} from "react-redux"
 import _ from "lodash"
@@ -14,7 +14,6 @@ class ProfileForm extends Component {
 
     renderInput = ({ input, label, meta }) => {
         const className = `field ${meta.error && meta.submitFailed ? 'error': ''}`;
-        console.log(meta);
 
         return (
             <div className={className}>

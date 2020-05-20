@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React from "react";
 import Resume from "./preview/Resume";
 
 const App = () => {

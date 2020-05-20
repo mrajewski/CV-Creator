@@ -2,16 +2,19 @@
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
   width: 900px;
-  padding: 30px 120px;
+  padding: 30px 0;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  //font-family: 'Kollektif', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 //*********** PHOTO SECTION  *************\\
 .photo {
   position: relative;
+  margin-bottom: 20px;
 
   &__portrait {
     max-height: 150px;
@@ -53,13 +56,29 @@
   }
 }
 
-//
+//*********** REGULAR SECTION  *************\\
 
 .section {
   cursor: pointer;
   outline: 1px dashed transparent;
   transition: outline-color .1s, background-color .1s;
   padding: 5px 10px;
+  width: 660px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__header {
+    margin: 0
+  }
+
+  &__hr {
+    height: 2px;
+    width: 100%;
+    background-color: $lightGrey;
+    margin: 5px 0;
+  }
 
   &:hover {
     outline-color: $blue;
@@ -67,19 +86,43 @@
   }
 }
 
-.name {
-  margin-bottom: 5px;
-  font-weight: 800;
-}
+//*********** PROFILE SECTION  *************\\
+.profile {
+  &__name {
+    font-size: 36px;
+    font-weight: 400;
+    font-family: 'Ovo', serif;
+    margin: 0
+  }
+  
+  &__hr {
+    height: 3px;
+    width: 60%;
+    background-color: $lightGrey;
+    margin: 5px 0;
+  }
 
-.title {
-  margin-bottom: 5px;
-}
+  &__title {
+    font-family: 'Kollektif', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+  }
 
-.address {
-  span {
-    font-size: 12px;
-    color: $lightGrey;
-    margin-right: 10px;
+  &__address {
+    background-color: $lightGrey;
+    width: 900px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    span {
+      margin-left: 10px;
+      font-size: 13px;
+      font-weight: 400;
+      margin-right: 10px;
+    }
   }
 }

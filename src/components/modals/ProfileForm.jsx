@@ -81,9 +81,9 @@ const validate = (formValues) => {
   return errors
 };
 
-const modalForm = connect(null, {profileUpdate})(ProfileForm);
+const profileForm = connect(null, {profileUpdate})(ProfileForm);
 
 export default reduxForm({
     form: "profileData",
     validate
-})(modalForm)
+})(profileForm)

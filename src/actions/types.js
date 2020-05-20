@@ -1,2 +1,3 @@
 export const PROFILE_UPDATE = "PROFILE_UPDATE";
 export const PHOTO_UPDATE = "PHOTO_UPDATE";
+export const SUMMARY_UPDATE = "SUMMARY_UPDATE";

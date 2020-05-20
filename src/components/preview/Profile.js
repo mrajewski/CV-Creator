@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 import {connect} from "react-redux"
-import ProfileForm from "../modals/ModalForm";
-
-import ImagePreview from "./ImagePreview"
+import ProfileForm from "../modals/ProfileForm";
+import {Icon} from "semantic-ui-react";
 
 
 const Profile = ({profile, photo}) => {
@@ -20,12 +19,22 @@ const Profile = ({profile, photo}) => {
     const renderSection = () => {
         return (
             <section onClick={openModal} className="section profile">
-                <h2 className="name">{profile.name}</h2>
-                <p className="title">{profile.job}</p>
-                <div className="address">
-                    <span>{profile.address}</span>
-                    <span>{profile.phone}</span>
-                    <span>{profile.mail}</span>
+                <h2 className="profile__name">{profile.name}</h2>
+                <div className="profile__hr"/>
+                <p className="profile__title">{profile.job}</p>
+                <div className="profile__address">
+                    <span>
+                        <Icon name="map marker alternate"/>
+                        {profile.address}
+                    </span>
+                    <span>
+                        <Icon name="phone"/>
+                        {profile.phone}
+                    </span>
+                    <span>
+                        <Icon name="envelope"/>
+                        {profile.mail}
+                    </span>
                 </div>
             </section>
         )

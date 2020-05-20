@@ -24,3 +24,10 @@ export const summaryUpdate = (summary) => {
         payload: summary
     }
 };
+
+export const skillsUpdate = (skills) => {
+    return {
+        type: SUMMARY_UPDATE,
+        payload: skills
+    }
+};

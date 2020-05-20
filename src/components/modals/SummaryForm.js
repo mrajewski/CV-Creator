@@ -17,7 +17,7 @@ class SummaryForm extends Component {
         return (
             <div className={className}>
                 <label>{label}</label>
-                <textarea {...input} autoComplete="off"/>
+                <textarea rows="5" {...input} autoComplete="off"/>
             </div>
         )
     };

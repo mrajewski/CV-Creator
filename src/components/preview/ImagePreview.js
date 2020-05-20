@@ -24,19 +24,18 @@ const ImagePreview = ({photo, photoUpdate}) => {
     };
 
     return (
-        <>
+        <section className="photo">
             <Image
                 src={photo}
                 size="small"
-                floated="right"
                 circular
-                className="photo"
+                className="photo__portrait"
             />
-            <input type="file" className="upload" onChange={e => handleImageChange(e)}/>
-            <div className="upload-overlay">
+            <input type="file" title="" className="photo__upload" onChange={e => handleImageChange(e)}/>
+            <div className="photo__overlay">
                 <Icon name="cloud upload" size="huge" color="grey"/>
             </div>
-        </>
+        </section>
     )
 };
 

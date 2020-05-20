@@ -5,11 +5,13 @@ import PrivateLife from "./PrivateLife";
 import Profile from "./Profile";
 import Skills from "./Skills";
 import Summary from "./Summary";
+import ImagePreview from "./ImagePreview";
 
 
 const Resume = () => {
     return (
         <div className="resume">
+            <ImagePreview/>
             <Profile/>
             <Summary/>
             <Skills/>

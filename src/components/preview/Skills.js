@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {connect} from "react-redux"
+import SkillsForm from "../modals/SkillsForm";
 
 const Skills = ({skills}) => {
     const [modalIsOpen, setIsOpen] = useState(false);
@@ -42,11 +43,11 @@ const Skills = ({skills}) => {
     return (
         <>
             {renderSection()}
-            {/*<SummaryForm*/}
-            {/*    open={modalIsOpen}*/}
-            {/*    close={closeModal}*/}
-            {/*    initialValues={skills}*/}
-            {/*/>*/}
+            <SkillsForm
+                open={modalIsOpen}
+                close={closeModal}
+                initialValues={{skills:skills}}
+            />
         </>
 
     )

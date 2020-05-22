@@ -24,7 +24,7 @@ class SummaryForm extends Component {
 
     render() {
         return (
-            <Modal open={this.props.open} onClose={this.props.close}>
+            <Modal size="small" open={this.props.open} onClose={this.props.close}>
                 <Modal.Header>Edit summary</Modal.Header>
                 <Modal.Content>
                     <form id="summary-form" className="ui form error" onSubmit={this.props.handleSubmit(this.onSubmit)}>

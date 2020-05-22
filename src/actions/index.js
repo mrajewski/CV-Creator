@@ -1,7 +1,8 @@
 import {
     PROFILE_UPDATE,
     PHOTO_UPDATE,
-    SUMMARY_UPDATE
+    SUMMARY_UPDATE,
+    SKILLS_UPDATE
 } from "./types";
 
 export const profileUpdate = (profile) => {
@@ -27,7 +28,7 @@ export const summaryUpdate = (summary) => {
 
 export const skillsUpdate = (skills) => {
     return {
-        type: SUMMARY_UPDATE,
+        type: SKILLS_UPDATE,
         payload: skills
     }
 };

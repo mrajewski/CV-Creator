@@ -4,11 +4,11 @@ import {Field, reduxForm, FieldArray} from "redux-form";
 import {connect} from "react-redux"
 import _ from "lodash";
 
-import {skillsUpdate} from "../../actions";
+import {experienceUpdate} from "../../actions";
 
-class SkillsForm extends Component {
+class ExperienceForm extends Component {
     onSubmit = (formValues) => {
-        this.props.skillsUpdate(formValues.skills);
+        this.props.experienceUpdate(formValues.experience);
         this.props.close()
     };
 
@@ -34,22 +34,44 @@ class SkillsForm extends Component {
         )
     };
 
-    renderSkills = (fieldArray) => {
+    renderExperience= (fieldArray) => {
         return (
             <div>
                 {fieldArray.fields.map((member, index) => (
-                        <div className="skills__form-item" key={index}>
-                            <Field
-                                component={this.renderInput}
-                                name={`${member}.group`}
-                                label="Skills group name"
-                                placeholder="Name of a group"
-                            />
+                        <div className="experience__form-item" key={index}>
+                            <div className="two fields">
+                                <Field
+                                    component={this.renderInput}
+                                    name={`${member}.position`}
+                                    label="Position"
+                                    placeholder="Position"
+                                />
+                                <Field
+                                    component={this.renderInput}
+                                    label="Company"
+                                    name={`${member}.company`}
+                                    placeholder="Company"
+                                />
+                            </div>
+                            <div className="two fields">
+                                <Field
+                                    component={this.renderInput}
+                                    name={`${member}.startDate`}
+                                    label="Date of Start"
+                                    placeholder="Date of Start"
+                                />
+                                <Field
+                                    component={this.renderInput}
+                                    label="Date of end"
+                                    name={`${member}.endDate`}
+                                    placeholder="Date of end"
+                                />
+                            </div>
                             <Field
                                 component={this.renderTextArea}
-                                label="Skills"
-                                name={`${member}.items`}
-                                placeholder="List your skills"
+                                label="Description"
+                                name={`${member}.description`}
+                                placeholder="Description"
                             />
                             <button
                                 className="ui button negative small right floated"
@@ -63,7 +85,7 @@ class SkillsForm extends Component {
                 ))}
                 <div className="skills__buttons">
                     <div className="ui button large primary right floated" onClick={() => fieldArray.fields.push()}>
-                        Add skill group
+                        Add experience
                     </div>
                 </div>
             </div>
@@ -75,13 +97,13 @@ class SkillsForm extends Component {
             <Modal size="small" open={this.props.open} onClose={this.props.close}>
                 <Modal.Header>Edit Skills</Modal.Header>
                 <Modal.Content>
-                    <form id="skills-form" className="ui form error" onSubmit={this.props.handleSubmit(this.onSubmit)}>
-                        <FieldArray name="skills" component={this.renderSkills}/>
+                    <form id="experience-form" className="ui form error" onSubmit={this.props.handleSubmit(this.onSubmit)}>
+                        <FieldArray name="experience" component={this.renderExperience}/>
                     </form>
                 </Modal.Content>
                 <Modal.Actions>
                     <button onClick={this.props.close} className="ui button">Cancel</button>
-                    <button className="ui button positive" type="submit" form="skills-form">Send</button>
+                    <button className="ui button positive" type="submit" form="experience-form">Send</button>
                 </Modal.Actions>
             </Modal>
         )
@@ -102,13 +124,13 @@ const validate = (formValues) => {
 
 const mapStateToProps = (state) => {
     return {
-        skills: state.resume.skills
+        experience: state.resume.experience
     }
 };
 
-const skillsForm = connect(mapStateToProps, {skillsUpdate})(SkillsForm);
+const experienceForm = connect(mapStateToProps, {experienceUpdate})(ExperienceForm);
 
 export default reduxForm({
-    form: "skillsData",
+    form: "experienceData",
     validate
-})(skillsForm)
+})(experienceForm)

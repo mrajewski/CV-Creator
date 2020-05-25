@@ -28,9 +28,9 @@ class SummaryForm extends Component {
                 <Modal.Header>Edit summary</Modal.Header>
                 <Modal.Content>
                     <form id="summary-form" className="ui form error" onSubmit={this.props.handleSubmit(this.onSubmit)}>
-                            <Field
-                                name="summary"
-                                label="Summary"
+                                <Field
+                                    name="summary"
+                                    label="Summary"
                                 component={this.renderInput}
                             />
                     </form>

@@ -11,7 +11,7 @@ App isn't finished yet
 * [TODO](#todo)
 
 ## General info
- A simple application that allows you to generate your own resume. Using a ready template, the user can simply enter their data and upload a photo. After that he can print or download the finished document.
+ A simple application that allows you to generate your own resume. Using a ready template, user can simply enter his data and upload a photo. After that he can print or download the finished document.
 	
 ## Technologies
 Project is created with:

@@ -2,8 +2,8 @@ import {EDUCATION_UPDATE} from "../actions/types";
 
 const INITIAL_STATE = [
     {
-        specialization: 'Computer Science',
-        school: 'MIT',
+        specialization: 'Example  specialization',
+        school: 'Example School',
         startDate: 'June 2010',
         endDate: 'June 2015'
     }

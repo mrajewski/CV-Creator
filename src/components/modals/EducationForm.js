@@ -33,12 +33,12 @@ class EducationForm extends Component {
                             <Field
                                 component={this.renderInput}
                                 name={`${member}.specialization`}
-                                label="Position"
+                                label="Specialization"
                                 placeholder="Position"
                             />
                             <Field
                                 component={this.renderInput}
-                                label="Company"
+                                label="School"
                                 name={`${member}.school`}
                                 placeholder="Company"
                             />

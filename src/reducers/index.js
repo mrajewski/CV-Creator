@@ -5,6 +5,7 @@ import summaryReducer from "./summaryReducer";
 import skillsReducer from "./skillsReducer";
 import experienceReducer from "./experienceReducer";
 import educationReducer from "./educationReducer";
+import privateLifeReducer from "./privateLifeReducer";
 
 const resumeReducers = combineReducers({
     profile: profileReducer,
@@ -12,7 +13,8 @@ const resumeReducers = combineReducers({
     summary: summaryReducer,
     skills: skillsReducer,
     experience: experienceReducer,
-    education: educationReducer
+    education: educationReducer,
+    privateLife: privateLifeReducer
 });
 
 export default resumeReducers

@@ -4,9 +4,9 @@ import {
     SUMMARY_UPDATE,
     SKILLS_UPDATE,
     EXPERIENCE_UPDATE,
-    EDUCATION_UPDATE
+    EDUCATION_UPDATE,
+    PRIVATE_UPDATE
 } from "./types";
-import EducationForm from "../components/modals/EducationForm";
 
 export const profileUpdate = (profile) => {
     return {
@@ -47,5 +47,12 @@ export const educationUpdate = (education) => {
     return {
         type: EDUCATION_UPDATE,
         payload: education
+    }
+};
+
+export const privateLifeUpdate = (privateLife) => {
+    return {
+        type: PRIVATE_UPDATE,
+        payload: privateLife
     }
 };

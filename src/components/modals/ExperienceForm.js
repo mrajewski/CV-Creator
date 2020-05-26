@@ -95,7 +95,7 @@ class ExperienceForm extends Component {
     render() {
         return (
             <Modal size="small" open={this.props.open} onClose={this.props.close}>
-                <Modal.Header>Edit Skills</Modal.Header>
+                <Modal.Header>Edit Experience</Modal.Header>
                 <Modal.Content>
                     <form id="experience-form" className="ui form error" onSubmit={this.props.handleSubmit(this.onSubmit)}>
                         <FieldArray name="experience" component={this.renderExperience}/>

@@ -16,7 +16,7 @@ Project is created with:
 * Semantic UI
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project just follow those steps:
 
 ```
 $ npm install

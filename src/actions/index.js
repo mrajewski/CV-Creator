@@ -3,8 +3,10 @@ import {
     PHOTO_UPDATE,
     SUMMARY_UPDATE,
     SKILLS_UPDATE,
-    EXPERIENCE_UPDATE
+    EXPERIENCE_UPDATE,
+    EDUCATION_UPDATE
 } from "./types";
+import EducationForm from "../components/modals/EducationForm";
 
 export const profileUpdate = (profile) => {
     return {
@@ -38,5 +40,12 @@ export const experienceUpdate = (experience) => {
     return {
         type: EXPERIENCE_UPDATE,
         payload: experience
+    }
+};
+
+export const educationUpdate = (education) => {
+    return {
+        type: EDUCATION_UPDATE,
+        payload: education
     }
 };

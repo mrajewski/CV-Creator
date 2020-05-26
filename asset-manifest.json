@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/CV-Creator/static/css/main.b7481d49.chunk.css",
+    "main.js": "/CV-Creator/static/js/main.80c9753f.chunk.js",
+    "main.js.map": "/CV-Creator/static/js/main.80c9753f.chunk.js.map",
+    "runtime-main.js": "/CV-Creator/static/js/runtime-main.a583bfde.js",
+    "runtime-main.js.map": "/CV-Creator/static/js/runtime-main.a583bfde.js.map",
+    "static/js/2.a795dae7.chunk.js": "/CV-Creator/static/js/2.a795dae7.chunk.js",
+    "static/js/2.a795dae7.chunk.js.map": "/CV-Creator/static/js/2.a795dae7.chunk.js.map",
+    "index.html": "/CV-Creator/index.html",
+    "precache-manifest.125af49d09565fd0b6340f4a4820727c.js": "/CV-Creator/precache-manifest.125af49d09565fd0b6340f4a4820727c.js",
+    "service-worker.js": "/CV-Creator/service-worker.js",
+    "static/css/main.b7481d49.chunk.css.map": "/CV-Creator/static/css/main.b7481d49.chunk.css.map",
+    "static/js/2.a795dae7.chunk.js.LICENSE.txt": "/CV-Creator/static/js/2.a795dae7.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/CV-Creator/static/media/._Kollektif-Bold.7f994e6a.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a583bfde.js",
+    "static/js/2.a795dae7.chunk.js",
+    "static/css/main.b7481d49.chunk.css",
+    "static/js/main.80c9753f.chunk.js"
+  ]
+}
